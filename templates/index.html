@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Bienvenido a la página de Wazuh</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <br>
+            <h1>Bienvenido a mi dash</h1>
+        </header>
+        <nav class="navbar">
+            <a href="{{ url_for('eventos') }}"  class="active">Eventos</a>
+            <a href="{{ url_for('lugares') }}">Lugares</a>
+            <a href="{{ url_for('vehiculos') }}">Vehiculos</a>
+            <a>Salir</a>
+        </nav>
+        <section class="contenido">
+            <h1>Bienvenido</h1>
+           {{plot_html}}
+        </section>
+        <footer>
+            <p>&copy; 2024 Gael</p>
+        </footer>
+    </div>
+</body>
+</html>

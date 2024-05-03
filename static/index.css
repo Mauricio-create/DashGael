@@ -1,0 +1,66 @@
+.barTipo {
+    display: block;
+    margin: auto;
+    /* Centra la imagen horizontalmente */
+    max-width: 100%;
+    /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    border: 2px solid #ccc;
+    /* Añade un borde ligero alrededor de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Añade una sombra sutil para resaltar la imagen */
+}
+
+
+.navbar {
+    background-color: #61b5ff;
+    /* Color de fondo de la barra de navegación */
+    overflow: hidden;
+    position: fixed;
+    /* Fijar la barra de navegación en la parte superior */
+    width: 100%;
+    /* Ancho completo */
+    top: 0;
+    /* Colocar en la parte superior */
+    z-index: 1000;
+    /* Asegurar que esté en la capa superior */
+}
+
+.navbar a {
+    float: left;
+    /* Alinear elementos a la izquierda */
+    display: block;
+    /* Convertir los elementos en bloques */
+    color: white;
+    /* Color del texto */
+    text-align: center;
+    /* Alinear texto al centro */
+    padding: 14px 20px;
+    /* Espaciado interno */
+    text-decoration: none;
+    /* Quitar subrayado */
+}
+
+.navbar a:hover {
+    background-color: #000000;
+    /* Cambiar color de fondo al pasar el cursor */
+    color: rgb(249, 249, 249);
+    /* Cambiar color del texto al pasar el cursor */
+}
+
+.navbar a.active {
+    background-color: #7ab8ff;
+    /* Color de fondo del elemento activo */
+}
+
+
+
+/* Estilos para la página de subida de logs */
+
+.contenedor {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}

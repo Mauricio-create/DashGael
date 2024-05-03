@@ -15,3 +15,4 @@ class DatabaseHandler:
         self.cursor.close()
         self.connection.close()
 
+# Toda esta clase es para hacer la conexión y los querys

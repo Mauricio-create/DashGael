@@ -68,6 +68,12 @@ class GraphGenerator:
                 plt.xlabel(xName)  
                 plt.ylabel(yName)  
                 plt.xticks(rotation=rotation)
+            
+            if plot_type == "card": 
+                return f"""<div class = "{className}">'\n
+                       <h2>{Titulo}</h2>'\n
+                       <p>{data[0]['numero']}</p>'\n
+                       </div>"""
 
             buf = BytesIO()
             plt.savefig(buf, format='png', bbox_inches='tight')

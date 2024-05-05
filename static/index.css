@@ -1,3 +1,8 @@
+body{
+    background-color: #ECECEC;
+
+}
+
 .navbar {
     background-color: #61b5ff;
     /* Color de fondo de la barra de navegación */
@@ -50,8 +55,35 @@
     text-align: center;
 }
 
+/*Graficos*/
+
 .accidentes {
-    width: 50%;
-    margin: 5px;
-    padding: 0%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.evento{
+    height: 94%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.fechas{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.genero{
+    width: 100%;
+    height: 46vh;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dias{
+    width: 100%;
+    height: 96%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

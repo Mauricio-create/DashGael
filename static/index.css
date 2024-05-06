@@ -10,43 +10,10 @@
     z-index: 1000;
 }
 
-.navbar a {
-    float: left;
-    /* Alinear elementos a la izquierda */
-    display: block;
-    /* Convertir los elementos en bloques */
-    color: white;
-    /* Color del texto */
-    text-align: center;
-    /* Alinear texto al centro */
-    padding: 14px 20px;
-    /* Espaciado interno */
-    text-decoration: none;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    border-radius: 20px;
-}
 
-.navbar a:hover {
-    background-color: #7fc1fa;
-    color: rgb(249, 249, 249);
-    font-size: 20px;
+.navbar a{
+    color:white;
 }
-
-.navbar a.active {
-    background-color: #7ab8ff;
-    /* Color de fondo del elemento activo */
-}
-
-.navbar a.active:hover{
-    background-color: #4e7bff !important;
-}
-
-.navbar a:focus{
-    transform: translateY(2px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 
 
 /* Estilos para la página de subida de logs */

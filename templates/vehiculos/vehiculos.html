@@ -11,11 +11,21 @@
 </head>
 <body>
     <div class="contenedor">
-        <nav class="navbar">
-            <a href="{{ url_for('eventos') }}">Eventos</a>
-            <a href="{{ url_for('lugares') }}">Lugares</a>
-            <a href="{{ url_for('vehiculos') }}" class="active">Vehiculos</a>
-            <a href="{{ url_for('salir') }}">Salir</a>
+        <nav class="navbar" data-bs-theme="dark">
+            <ul class = "nav nav-tabs">
+                <li class="nav-item">
+                    <a href="{{ url_for('eventos') }}"  class = "nav-link">Eventos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('lugares') }}" class = "nav-link">Lugares</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('vehiculos') }}" class = "nav-link active">Vehiculos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('salir') }}" class = "nav-link">Salir</a>
+                </li>
+            </ul>
         </nav>
         <section class="contenido">
             <h1>Bienvenido</h1>

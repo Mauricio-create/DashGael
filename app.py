@@ -25,7 +25,7 @@ def map_alcaldias():
     query = "SELECT alcaldia, coordenada_x, coordenada_y from tablename"
     data = db.query_db(query, None)
     alcaldias_data = pd.DataFrame(data)
-    alcaldias_data.dropna(subset=['coordenada_x', 'coordenada_y'], inplace = True)
+    alcaldias_data.dropna(subset=['alcaldia','coordenada_x', 'coordenada_y'], inplace = True)
     alcaldias_data['coordenada_x'] = pd.to_numeric(alcaldias_data["coordenada_x"], errors='coerce')
     alcaldias_data['coordenada_y'] = pd.to_numeric(alcaldias_data["coordenada_y"], errors='coerce')
     mapGenerator = MapGenerator(alcaldias_data,path)
@@ -37,7 +37,7 @@ def map_colonias():
     query = "SELECT colonia, coordenada_x, coordenada_y from tablename"
     data = db.query_db(query, None)
     alcaldias_data = pd.DataFrame(data)
-    alcaldias_data.dropna(subset=['coordenada_x', 'coordenada_y'], inplace = True)
+    alcaldias_data.dropna(subset=['colonia','coordenada_x', 'coordenada_y'], inplace = True)
     alcaldias_data['coordenada_x'] = pd.to_numeric(alcaldias_data["coordenada_x"], errors='coerce')
     alcaldias_data['coordenada_y'] = pd.to_numeric(alcaldias_data["coordenada_y"], errors='coerce')
     mapGenerator = MapGenerator(alcaldias_data,path)

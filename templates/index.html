@@ -13,10 +13,20 @@
 <body>
     <div class="contenedor">
         <nav class="navbar" data-bs-theme="dark">
-            <a href="{{ url_for('eventos') }}"  class="active">Eventos</a>
-            <a href="{{ url_for('lugares') }}">Lugares</a>
-            <a href="{{ url_for('vehiculos') }}">Vehiculos</a>
-            <a href="{{ url_for('salir') }}">Salir</a>
+            <ul class = "nav nav-tabs">
+                <li class="nav-item">
+                    <a href="{{ url_for('eventos') }}"  class = "nav-link active">Eventos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('lugares') }}" class = "nav-link">Lugares</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('vehiculos') }}" class = "nav-link">Vehiculos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('salir') }}" class = "nav-link">Salir</a>
+                </li>
+            </ul>
         </nav>
         <h1>Dashboar accidentes automovilisticos (eventos)</h1>
         <br>

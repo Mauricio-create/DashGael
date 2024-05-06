@@ -26,8 +26,9 @@ def map_alcaldias():
     data = db.query_db(query, None)
     alcaldias_data = pd.DataFrame(data)
     alcaldias_data.dropna(subset=['alcaldia','coordenada_x', 'coordenada_y'], inplace = True)
-    alcaldias_data['coordenada_x'] = pd.to_numeric(alcaldias_data["coordenada_x"], errors='coerce')
-    alcaldias_data['coordenada_y'] = pd.to_numeric(alcaldias_data["coordenada_y"], errors='coerce')
+    # Convertir las columnas a numéricas y rellenar los valores faltantes con cero
+    alcaldias_data['coordenada_x'] = pd.to_numeric(alcaldias_data["coordenada_x"], errors='coerce').fillna(0)
+    alcaldias_data['coordenada_y'] = pd.to_numeric(alcaldias_data["coordenada_y"], errors='coerce').fillna(0)
     mapGenerator = MapGenerator(alcaldias_data,path)
     return mapGenerator.gereate_map()
 
@@ -38,8 +39,8 @@ def map_colonias():
     data = db.query_db(query, None)
     alcaldias_data = pd.DataFrame(data)
     alcaldias_data.dropna(subset=['colonia','coordenada_x', 'coordenada_y'], inplace = True)
-    alcaldias_data['coordenada_x'] = pd.to_numeric(alcaldias_data["coordenada_x"], errors='coerce')
-    alcaldias_data['coordenada_y'] = pd.to_numeric(alcaldias_data["coordenada_y"], errors='coerce')
+    alcaldias_data['coordenada_x'] = pd.to_numeric(alcaldias_data["coordenada_x"], errors='coerce').fillna(0)
+    alcaldias_data['coordenada_y'] = pd.to_numeric(alcaldias_data["coordenada_y"], errors='coerce').fillna(0)
     mapGenerator = MapGenerator(alcaldias_data,path)
     return mapGenerator.gereate_map()
 

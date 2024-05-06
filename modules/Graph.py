@@ -14,6 +14,13 @@ import pandas as pd
 #   heatmap: necesita solo un df con columnas numericas
 #   pairplot: solo necesita un df
 
+# Función de formato personalizada para dividir los números entre 100,000 y añadir "Miles" al final
+def format_func(value):
+    if value >= 100000:
+        return f'{value / 100000:.1f} Miles'
+    else:
+        return str(int(value))
+
 class GraphGenerator:
     def __init__(self, db_handler):
         self.db_handler = db_handler
@@ -49,7 +56,8 @@ class GraphGenerator:
                 plt.ylabel(yName)  
                 plt.xticks(rotation=rotation)  
             if plot_type == "heatmap": 
-                sns.heatmap(df)
+                pivot_df = df.pivot_table(index='implicado', columns='vehiculo', values='numero', aggfunc='sum')
+                sns.heatmap(pivot_df, cmap='coolwarm',annot=True, fmt=format_func(0))
                 plt.title(Titulo)  
                 plt.xlabel(xName)  
                 plt.ylabel(yName)  

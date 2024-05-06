@@ -16,7 +16,7 @@
             <a href="{{ url_for('eventos') }}"  class="active">Eventos</a>
             <a href="{{ url_for('lugares') }}">Lugares</a>
             <a href="{{ url_for('vehiculos') }}">Vehiculos</a>
-            <a>Salir</a>
+            <a href="{{ url_for('salir') }}">Salir</a>
         </nav>
         <h1>Dashboar accidentes automovilisticos (eventos)</h1>
         <br>
@@ -41,6 +41,9 @@
                 </div>
                 <div class="col">
                     {{plot_html4}}
+                </div>
+                <div class = "col">
+                    {{plot_html_age}}
                 </div>
             </div>
         </section>

@@ -1,7 +1,3 @@
-body{
-    background-color: #ECECEC;
-
-}
 
 .navbar {
     background-color: #61b5ff;
@@ -10,11 +6,8 @@ body{
     position: fixed;
     /* Fijar la barra de navegación en la parte superior */
     width: 100%;
-    /* Ancho completo */
     top: 0;
-    /* Colocar en la parte superior */
     z-index: 1000;
-    /* Asegurar que esté en la capa superior */
 }
 
 .navbar a {
@@ -29,19 +22,29 @@ body{
     padding: 14px 20px;
     /* Espaciado interno */
     text-decoration: none;
-    /* Quitar subrayado */
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border-radius: 20px;
 }
 
 .navbar a:hover {
-    background-color: #000000;
-    /* Cambiar color de fondo al pasar el cursor */
+    background-color: #7fc1fa;
     color: rgb(249, 249, 249);
-    /* Cambiar color del texto al pasar el cursor */
+    font-size: 20px;
 }
 
 .navbar a.active {
     background-color: #7ab8ff;
     /* Color de fondo del elemento activo */
+}
+
+.navbar a.active:hover{
+    background-color: #4e7bff !important;
+}
+
+.navbar a:focus{
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -83,7 +86,14 @@ body{
 
 .dias{
     width: 100%;
-    height: 96%;
+    height: 40vh;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.ageDistribution{
+    width: 100%;
+    height: 40vh;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
